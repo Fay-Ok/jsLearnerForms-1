@@ -76,17 +76,17 @@ Even the longest journey begins with a single step. Good luck!
 //     greet: greet
 // };
 
-(function () {
+(function() {
     'use strict';
 
-    function greet (greeting){
+    function greet(greeting) {
         return 'Hello!';
     }
 
     module.exports = {
         greet: greet
     };
-    
+
 })();
 
 // Run the tests!
@@ -107,7 +107,7 @@ Even the longest journey begins with a single step. Good luck!
 //     }
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -146,7 +146,7 @@ Even the longest journey begins with a single step. Good luck!
 // };
 
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -182,7 +182,7 @@ Even the longest journey begins with a single step. Good luck!
 //     return x * x;
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -219,7 +219,7 @@ Even the longest journey begins with a single step. Good luck!
 //     return Math.pow(x, 2);
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -261,7 +261,7 @@ Even the longest journey begins with a single step. Good luck!
 //     ...
 // };
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -303,7 +303,7 @@ Even the longest journey begins with a single step. Good luck!
 //     return Math.sqrt(x);
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -346,7 +346,7 @@ Even the longest journey begins with a single step. Good luck!
 //     ...
 // };
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -398,7 +398,7 @@ Even the longest journey begins with a single step. Good luck!
 //     }
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -418,7 +418,7 @@ Even the longest journey begins with a single step. Good luck!
     }
 
     function sum(nums) {
-        if(nums.length === 1) {
+        if (nums.length === 1) {
             return nums[0];
         } else {
             return nums[0] + nums[1];
@@ -447,15 +447,15 @@ Even the longest journey begins with a single step. Good luck!
 
 // function sum(nums) {
 //     let finalSum = 0;
-    
+
 //     for(let index = 0; index < nums.length; index++) {
 //         finalSum += nums[index];
 //     }
-    
+
 //     return finalSum;
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -476,11 +476,11 @@ Even the longest journey begins with a single step. Good luck!
 
     function sum(nums) {
         let finalSum = 0;
-        
-        for(let index = 0; index < nums.length; index++) {
+
+        for (let index = 0; index < nums.length; index++) {
             finalSum += nums[index];
         }
-        
+
         return finalSum;
     }
 
@@ -509,7 +509,7 @@ Even the longest journey begins with a single step. Good luck!
 //     ...
 // };
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -562,16 +562,16 @@ Even the longest journey begins with a single step. Good luck!
 // function squareAll(nums) {
 //     let result = [];
 //     let squaredNum = 0;
-    
+
 //     for(let index = 0; index < nums.length; index++) {
 //         squaredNum = square(nums[index]);
 //         result[index] = squaredNum;
 //     }
-    
+
 //     return result;
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -603,12 +603,12 @@ Even the longest journey begins with a single step. Good luck!
     function squareAll(nums) {
         let result = [];
         let squaredNum = 0;
-        
-        for(let index = 0; index < nums.length; index++) {
+
+        for (let index = 0; index < nums.length; index++) {
             squaredNum = square(nums[index]);
             result[index] = squaredNum;
         }
-        
+
         return result;
     }
 
@@ -638,7 +638,7 @@ Even the longest journey begins with a single step. Good luck!
 //     ...
 // };
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -706,7 +706,7 @@ Even the longest journey begins with a single step. Good luck!
 //     return sum(squares);
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -779,7 +779,7 @@ Even the longest journey begins with a single step. Good luck!
 //     ...
 // };
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -852,7 +852,7 @@ Even the longest journey begins with a single step. Good luck!
 //     return valueArray.slice(0);
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -922,15 +922,15 @@ Even the longest journey begins with a single step. Good luck!
 
 // function buildVector(valueArray) {
 //     let vector = valueArray.slice(0);
-    
+
 //     vector.valueOf = function () {
 //         return this.slice(0);
 //     };
-    
+
 //     return vector;
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -978,11 +978,11 @@ Even the longest journey begins with a single step. Good luck!
 
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
-        
-        vector.valueOf = function () {
+
+        vector.valueOf = function() {
             return this.slice(0);
         };
-        
+
         return vector;
     }
 
@@ -1006,19 +1006,19 @@ Even the longest journey begins with a single step. Good luck!
 
 // function buildVector(valueArray) {
 //     let vector = valueArray.slice(0);
-    
+
 //     vector.valueOf = function () {
 //         return this.slice(0);
 //     };
-    
+
 //     vector.toString = function () {
 //         return '<' + this.valueOf().toString() + '>';
 //     };
-    
+
 //     return vector;
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1066,15 +1066,15 @@ Even the longest journey begins with a single step. Good luck!
 
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
-        
-        vector.valueOf = function () {
+
+        vector.valueOf = function() {
             return this.slice(0);
         };
-        
-        vector.toString = function () {
+
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
-        
+
         return vector;
     }
 
@@ -1105,7 +1105,7 @@ Even the longest journey begins with a single step. Good luck!
 //     ...
 // };
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1153,15 +1153,15 @@ Even the longest journey begins with a single step. Good luck!
 
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
-        
-        vector.valueOf = function () {
+
+        vector.valueOf = function() {
             return this.slice(0);
         };
-        
-        vector.toString = function () {
+
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
-        
+
         return vector;
     }
 
@@ -1192,7 +1192,7 @@ Even the longest journey begins with a single step. Good luck!
 //     return squareRoot(squaredNum);
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1240,15 +1240,15 @@ Even the longest journey begins with a single step. Good luck!
 
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
-        
-        vector.valueOf = function () {
+
+        vector.valueOf = function() {
             return this.slice(0);
         };
-        
-        vector.toString = function () {
+
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
-        
+
         return vector;
     }
 
@@ -1278,7 +1278,7 @@ Even the longest journey begins with a single step. Good luck!
 
 // function magnitude(vector) {
 //     let squares;
-    
+
 //     if(vector.length === 1) {
 //         squares = square(vector[0]);
 //         return squareRoot(squares);
@@ -1288,7 +1288,7 @@ Even the longest journey begins with a single step. Good luck!
 //     }
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1336,22 +1336,22 @@ Even the longest journey begins with a single step. Good luck!
 
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
-        
-        vector.valueOf = function () {
+
+        vector.valueOf = function() {
             return this.slice(0);
         };
-        
-        vector.toString = function () {
+
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
-        
+
         return vector;
     }
 
     function magnitude(vector) {
         let squares;
-        
-        if(vector.length === 1) {
+
+        if (vector.length === 1) {
             squares = square(vector[0]);
             return squareRoot(squares);
         } else {
@@ -1384,7 +1384,7 @@ Even the longest journey begins with a single step. Good luck!
 //     return squareRoot(summedSquares);
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1432,15 +1432,15 @@ Even the longest journey begins with a single step. Good luck!
 
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
-        
-        vector.valueOf = function () {
+
+        vector.valueOf = function() {
             return this.slice(0);
         };
-        
-        vector.toString = function () {
+
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
-        
+
         return vector;
     }
 
@@ -1477,7 +1477,7 @@ Even the longest journey begins with a single step. Good luck!
 //     ...
 // };
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1526,11 +1526,11 @@ Even the longest journey begins with a single step. Good luck!
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
 
-        vector.valueOf = function () {
+        vector.valueOf = function() {
             return this.slice(0);
         };
 
-        vector.toString = function () {
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
 
@@ -1575,7 +1575,7 @@ Even the longest journey begins with a single step. Good luck!
 //     }
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1624,11 +1624,11 @@ Even the longest journey begins with a single step. Good luck!
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
 
-        vector.valueOf = function () {
+        vector.valueOf = function() {
             return this.slice(0);
         };
 
-        vector.toString = function () {
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
 
@@ -1675,15 +1675,15 @@ Even the longest journey begins with a single step. Good luck!
 //     if(magnitude(vectors[0]) < maxLength) {
 //         filteredVectors[0] = vectors[0];
 //     }
-    
+
 //     if(vectors.length > 1 && magnitude(vectors[1]) < maxLength) {
 //         filteredVectors[filteredVectors.length] = vectors[1];
 //     }
-    
+
 //     return filteredVectors;
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1732,11 +1732,11 @@ Even the longest journey begins with a single step. Good luck!
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
 
-        vector.valueOf = function () {
+        vector.valueOf = function() {
             return this.slice(0);
         };
 
-        vector.toString = function () {
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
 
@@ -1751,14 +1751,14 @@ Even the longest journey begins with a single step. Good luck!
     function getVectorsShorterThan(maxLength, vectors) {
         let filteredVectors = [];
 
-        if(magnitude(vectors[0]) < maxLength) {
+        if (magnitude(vectors[0]) < maxLength) {
             filteredVectors[0] = vectors[0];
         }
-        
-        if(vectors.length > 1 && magnitude(vectors[1]) < maxLength) {
+
+        if (vectors.length > 1 && magnitude(vectors[1]) < maxLength) {
             filteredVectors[filteredVectors.length] = vectors[1];
         }
-        
+
         return filteredVectors;
     }
 
@@ -1785,17 +1785,17 @@ Even the longest journey begins with a single step. Good luck!
 
 // function getVectorsShorterThan(maxLength, vectors) {
 //     let filteredVectors = [];
-    
+
 //     for(let index = 0; index < vectors.length; index++) {
 //         if(magnitude(vectors[index]) <= maxLength) {
 //             filteredVectors[filteredVectors.length] = vectors[index];
 //         }
 //     }
-    
+
 //     return filteredVectors;
 // }
 
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
@@ -1844,11 +1844,11 @@ Even the longest journey begins with a single step. Good luck!
     function buildVector(valueArray) {
         let vector = valueArray.slice(0);
 
-        vector.valueOf = function () {
+        vector.valueOf = function() {
             return this.slice(0);
         };
 
-        vector.toString = function () {
+        vector.toString = function() {
             return '<' + this.valueOf().toString() + '>';
         };
 
@@ -1862,13 +1862,13 @@ Even the longest journey begins with a single step. Good luck!
 
     function getVectorsShorterThan(maxLength, vectors) {
         let filteredVectors = [];
-        
-        for(let index = 0; index < vectors.length; index++) {
-            if(magnitude(vectors[index]) <= maxLength) {
+
+        for (let index = 0; index < vectors.length; index++) {
+            if (magnitude(vectors[index]) <= maxLength) {
                 filteredVectors[filteredVectors.length] = vectors[index];
             }
         }
-        
+
         return filteredVectors;
     }
 
