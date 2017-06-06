@@ -120,7 +120,6 @@ describe('Forms', function() {
         // First form, movement 17
         it('should return vector with valueOf function which does not return vector', function() {
             var vector = jsforms.buildVector([1, 2, 3]);
-
             assert.equal(vector.valueOf() !== vector, true);
         });
 

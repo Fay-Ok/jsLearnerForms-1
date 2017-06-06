@@ -37,12 +37,20 @@
     }
 
     function buildVector(initialArray) {
+        let vector = initialArray.slice();
 
-        initialArray.forEach(function(item) {
+        vector.valueOf = function() {
+            return vector.slice();
+        }
+        vector.toString = function() {
+            return '<' + vector + '>';
+        }
 
-        })
+        return vector;
+    }
 
-        return initialArray;
+    function magnitude(values) {
+        return values;
     }
 
 
@@ -53,7 +61,8 @@
         sum: sum,
         squareAll: squareAll,
         sumOfSquares: sumOfSquares,
-        buildVector: buildVector
+        buildVector: buildVector,
+        magnitude: magnitude
     };
 
 })();
