@@ -50,7 +50,10 @@
     }
 
     function magnitude(values) {
-        return values;
+        if (values.length === 0) {
+            return Math.abs(values);
+        }
+        return sum(squareAll(values));
     }
 
 
