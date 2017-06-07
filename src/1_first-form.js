@@ -60,8 +60,16 @@
 
     }
 
-    function getVectorsShorterThan(values) {
+    function getVectorsShorterThan(length, vectors) {
 
+        var magnitudeVec = [];
+
+        for (let i = 0; i < vectors.length; i++) {
+            if (magnitude(vectors[i]) < length) {
+                magnitudeVec[magnitudeVec.length] = vectors[i];
+            }
+        }
+        return magnitudeVec;
     }
 
 

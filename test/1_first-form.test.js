@@ -214,7 +214,6 @@ describe('Forms', function() {
             // (toString is also built in.)
 
             let vector = jsforms.buildVector([1, 2, 3]);
-
             assert.equal(vector.toString(), '<1,2,3>');
         });
 
@@ -265,7 +264,7 @@ describe('Forms', function() {
 
             let vectors = [jsforms.buildVector([1, 2])];
             let result = jsforms.getVectorsShorterThan(5, vectors);
-
+            console.log(result);
             assert.equal(result.length, 1);
             assert.equal(result[0].toString(), '<1,2>');
         });
@@ -278,7 +277,7 @@ describe('Forms', function() {
             let vectors = [jsforms.buildVector([3, 4])];
             let result = jsforms.getVectorsShorterThan(length, vectors);
 
-            assert.equal(result.length, 0)
+            assert.equal(result.length, 0);
         });
 
         it('should only filter vectors which are too long', function() {
@@ -289,7 +288,7 @@ describe('Forms', function() {
                 jsforms.buildVector([10, 10]),
                 jsforms.buildVector([3, 4])
             ];
-
+            console.log(vectors);
             let result = jsforms.getVectorsShorterThan(length, vectors);
 
             assert.equal(result.length, 1);
@@ -309,7 +308,7 @@ describe('Forms', function() {
             ];
 
             let result = jsforms.getVectorsShorterThan(10, vectors);
-
+            console.log(result);
             let resultValues = [
                 result[0].toString(),
                 result[1].toString()
