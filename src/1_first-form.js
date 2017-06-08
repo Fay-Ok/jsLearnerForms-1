@@ -2,10 +2,12 @@
     'use strict';
 
     function greet(greeting) {
-        if (greeting === 'Salutations') {
-            return 'Salutations!';
+
+        if (greeting === undefined) {
+            return 'Hello!';
+        } else {
+            return greeting + '!';
         }
-        return 'Hello!';
     }
 
     function square(value) {
@@ -17,61 +19,58 @@
     }
 
     function sum(value) {
-        var result = 0;
-        value.forEach(function(item) {
-            result += item;
-        });
-        return result;
+        let sum = 0;
+        for (let i = 0; i < value.length; i++) {
+            sum += value[i];
+        }
+        return sum;
     }
 
     function squareAll(values) {
-        var result = [];
-        values.forEach(function(item) {
-            result.push(square(item));
-        })
+        let result = [];
+        for (let i = 0; i < values.length; i++) {
+            result[i] = square(values[i]);
+        }
         return result;
     }
 
-    function sumOfSquares(values) {
-        return sum(squareAll(values));
+    function sumOfSquares(value) {
+        return sum(squareAll(value));
     }
 
-    function buildVector(initialArray) {
-        let vector = initialArray.slice();
+    function buildVector(value) {
 
-        vector.valueOf = function() {
-            return vector.slice();
-        }
-        vector.toString = function() {
-            return '<' + vector + '>';
+
+        let vectore = value.slice();
+
+        vectore.valueOf = function() {
+            return value;
+        };
+
+        vectore.toString = function() {
+            return '<' + value + '>';
         }
 
-        return vector;
+        return vectore;
+
     }
 
-    function magnitude(values) {
-
-        if (values.length === 1) {
-            return squareRoot(square(values));
-        } else {
-            let result = sum(squareAll(values));
-            return squareRoot(result);
-        }
-
+    function magnitude(value) {
+        return squareRoot(sumOfSquares(value));
     }
 
     function getVectorsShorterThan(length, vectors) {
-
-        var magnitudeVec = [];
+        let result = [];
 
         for (let i = 0; i < vectors.length; i++) {
             if (magnitude(vectors[i]) < length) {
-                magnitudeVec[magnitudeVec.length] = vectors[i];
+                result.push(vectors[i]);
             }
-        }
-        return magnitudeVec;
-    }
 
+        }
+        return result;
+
+    }
 
     module.exports = {
         greet: greet,
@@ -83,6 +82,5 @@
         buildVector: buildVector,
         magnitude: magnitude,
         getVectorsShorterThan: getVectorsShorterThan
-    };
-
+    }
 })();

@@ -1,66 +1,69 @@
-(function () {
+(function() {
     'use strict';
 
     function greet(greeting) {
-        if (greeting !== undefined) {
-            return greeting + '!';
-        } else {
-            return 'Hello!';
-        }
+
+        return typeof greeting === 'string' ? greeting + '!' : 'Hello!';
+
     }
 
-    function square (x){
+    function square(x) {
         return Math.pow(x, 2);
     }
 
-    function squareRoot (x) {
+    function squareRoot(x) {
         return Math.sqrt(x);
     }
 
-    function sum (nums) {
+    function add(a, b) {
+        return a + b;
+    }
+
+    function sum(nums) {
         let result = 0;
 
-        for(let index = 0; index < nums.length; index += 1) {
-            result += nums[index];
-        }
+        nums.forEach(
+            item => result = add(item, result)
+            //result = add(item, result);
+        );
 
         return result;
     }
 
-    function squareAll (nums) {
+    function squareAll(nums) {
         let result = [];
 
-        for(let index = 0; index < nums.length; index += 1) {
+        for (let index = 0; index < nums.length; index += 1) {
             result[index] = square(nums[index]);
         }
 
         return result;
     }
 
-    function sumOfSquares (nums) {
+    function sumOfSquares(nums) {
         let squares = squareAll(nums);
         return sum(squares);
     }
 
-    function buildVector (points) {
+    function buildVector(points) {
         let vector = points.slice(0);
 
-        vector.valueOf = function () { return points.slice(0); };
-        vector.toString = function () { return '<' + points.join(',') + '>'; };
+        vector.valueOf = function() { return points.slice(0); };
+        vector.toString = function() { return '<' + points.join(',') + '>'; };
 
         return vector;
     }
 
-    function magnitude (vector) {
+    function magnitude(vector) {
         let squaredMagnitude = sumOfSquares(vector);
         return squareRoot(squaredMagnitude);
     }
 
-    function getVectorsShorterThan (length, vectors) {
+    function getVectorsShorterThan(length, vectors) {
         let result = [];
 
-        for(let index = 0; index < vectors.length; index += 1) {
-            if(magnitude(vectors[index]) < length) {
+        for (let index = 0; index < vectors.length; index += 1) {
+            if (magnitude(vectors[index]) < length) {
                 result[result.length] = vectors[index];
             }
         }
