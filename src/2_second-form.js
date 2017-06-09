@@ -24,7 +24,6 @@
 
         nums.forEach(
             item => result = add(item, result)
-            //result = add(item, result);
         );
 
         return result;
@@ -33,9 +32,7 @@
     function squareAll(nums) {
         let result = [];
 
-        for (let index = 0; index < nums.length; index += 1) {
-            result[index] = square(nums[index]);
-        }
+        result = nums.map((item) => square(item));
 
         return result;
     }
