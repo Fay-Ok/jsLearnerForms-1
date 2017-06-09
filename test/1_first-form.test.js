@@ -263,12 +263,10 @@ describe('Forms', function() {
             ];
 
             let result = jsforms.getVectorsShorterThan(10, vectors);
-
             let resultValues = [
                 result[0].toString(),
                 result[1].toString()
             ];
-            console.log(result);
             assert.equal(resultValues.toString(), '<1,2,2>,<3,4>');
         });
 

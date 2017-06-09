@@ -51,17 +51,15 @@
     }
 
     function magnitude(value) {
-
         return squareRoot(sum(squareAll(value)));
     }
 
     function getVectorsShorterThan(length, vectores) {
-        console.log(vectores[0]);
-        let result = []
+        let result = [];
 
         for (var index = 0; index < vectores[0].length; index++) {
             if (magnitude(vectores[index]) < length) {
-                result[0] = vectores[index];
+                result.push(vectores[index]);
             }
         }
         return result;
