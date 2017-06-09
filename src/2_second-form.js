@@ -21,7 +21,6 @@
 
     function sum(nums) {
         let result = 0;
-
         nums.forEach(
             item => result = add(item, result)
         );
@@ -30,16 +29,22 @@
     }
 
     function squareAll(nums) {
-        let result = [];
+        return nums.map(square);
 
-        result = nums.map((item) => square(item));
-
-        return result;
     }
 
     function sumOfSquares(nums) {
         let squares = squareAll(nums);
         return sum(squares);
+    }
+
+    function Vector(points) {
+        this.points = points;
+    }
+
+    Vector.prototype.valueOf = function() {
+        vector.valueOf = function() { return points.slice(0); };
+        vector.toString = function() { return '<' + points.join(',') + '>'; };
     }
 
     function buildVector(points) {
