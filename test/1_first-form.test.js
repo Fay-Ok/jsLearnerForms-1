@@ -1,6 +1,6 @@
 'use strict';
 
-const jsforms = require('../src/2_second-form');
+const jsforms = require('../src/1_first-form');
 const assert = require('chai').assert;
 
 require('./helpers/global-helper');
@@ -168,12 +168,13 @@ describe('Forms', function() {
 
         it('should return vector with valueOf function which does not return vector', function() {
             let vector = jsforms.buildVector([1, 2, 3]);
-
+            console.log(vector);
             assert.equal(vector.valueOf() !== vector, true);
         });
 
         it('should return a vector where toString returns a vector string', function() {
             let vector = jsforms.buildVector([1, 2, 3]);
+            console.log(vector);
 
             assert.equal(vector.toString(), '<1,2,3>');
         });
@@ -248,7 +249,7 @@ describe('Forms', function() {
             ];
 
             let result = jsforms.getVectorsShorterThan(length, vectors);
-
+            console.log(result);
             assert.equal(result.length, 1);
             assert.equal(result[0].toString(), '<3,4>');
         });
@@ -267,7 +268,7 @@ describe('Forms', function() {
                 result[0].toString(),
                 result[1].toString()
             ];
-
+            console.log(result);
             assert.equal(resultValues.toString(), '<1,2,2>,<3,4>');
         });
 

@@ -38,38 +38,33 @@
         return sum(squareAll(value));
     }
 
-    function buildVector(value) {
+    function buildVector(points) {
+        let vector = points.slice();
 
-
-        let vectore = value.slice();
-
-        vectore.valueOf = function() {
-            return value;
-        };
-
-        vectore.toString = function() {
-            return '<' + value + '>';
+        vector.valueOf = function() {
+            return points.slice();
         }
-
-        return vectore;
-
+        vector.toString = function() {
+            return '<' + points + '>';
+        }
+        return vector;
     }
 
     function magnitude(value) {
-        return squareRoot(sumOfSquares(value));
+
+        return squareRoot(sum(squareAll(value)));
     }
 
-    function getVectorsShorterThan(length, vectors) {
-        let result = [];
+    function getVectorsShorterThan(length, vectores) {
+        console.log(vectores[0]);
+        let result = []
 
-        for (let i = 0; i < vectors.length; i++) {
-            if (magnitude(vectors[i]) < length) {
-                result.push(vectors[i]);
+        for (var index = 0; index < vectores[0].length; index++) {
+            if (magnitude(vectores[index]) < length) {
+                result[0] = vectores[index];
             }
-
         }
         return result;
-
     }
 
     module.exports = {
