@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     function greet(greeting) {
@@ -29,7 +29,7 @@
     }
 
     function squareAll(nums) {
-        return nums.map(square);
+        return nums.valueOf().map(square);
 
     }
 
@@ -37,23 +37,23 @@
         let squares = squareAll(nums);
         return sum(squares);
     }
+    //Points: Using "New" keyword 
+    //using new keyword will create new object with similar type
+    //this will point to the newly created function
+    //executes constuctor function whenever this is used and this points to the new object
 
     function Vector(points) {
         this.points = points;
+        points.forEach((value, index) => this[index] = value);
     }
 
-    Vector.prototype.valueOf = function() {
-        vector.valueOf = function() { return points.slice(0); };
-        vector.toString = function() { return '<' + points.join(',') + '>'; };
+    Vector.prototype = {
+        valueOf: function () { return this.points.valueOf(); },
+        toString: function () { return '<' + this.points.join(',') + '>'; }
     }
 
     function buildVector(points) {
-        let vector = points.slice(0);
-
-        vector.valueOf = function() { return points.slice(0); };
-        vector.toString = function() { return '<' + points.join(',') + '>'; };
-
-        return vector;
+        return new Vector(points);
     }
 
     function magnitude(vector) {
@@ -62,15 +62,7 @@
     }
 
     function getVectorsShorterThan(length, vectors) {
-        let result = [];
-
-        for (let index = 0; index < vectors.length; index += 1) {
-            if (magnitude(vectors[index]) < length) {
-                result[result.length] = vectors[index];
-            }
-        }
-
-        return result;
+        return vectors.filter((value) => magnitude(value) < length);
     }
 
     module.exports = {
