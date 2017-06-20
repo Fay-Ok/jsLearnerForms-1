@@ -14,7 +14,6 @@ describe('Forms', function() {
      * 
      * Key: Make sure tests continue to pass.
      */
-
     describe('greeter', function() {
         /*
          * Refactoring steps:
@@ -54,7 +53,7 @@ describe('Forms', function() {
 
         // Keep the tests passing!
 
-        it('should take the square root of 1', function() {
+        it('should take the square root of 1', function() { 
             assert.equal(jsforms.squareRoot(1), 1);
         });
 
