@@ -10,7 +10,6 @@ describe('Forms', function () {
     describe('greeter', function () {
 
         /*
-         * 1 - Refactor typeof in greet:
          *      a. Extract typeof expression to a function:
          *      b. Refactor greet to use isType
          * 
@@ -95,11 +94,11 @@ describe('Forms', function () {
         });
 
         it('should add two numbers', function () {
-            assert.equal(jsforms.sum([2, 3]), 5);
+            assert.equal(jsforms.sum([2, 3]), 5);  
         });
 
         it('should add multiple numbers', function () {
-            assert.equal(jsforms.sum([1, 3, 5, 7]), 16);
+            assert.equal(jsforms.sum([1, 3, 5, 7]), 16); 
         });
     });
 
