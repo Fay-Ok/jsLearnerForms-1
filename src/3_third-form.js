@@ -1,8 +1,13 @@
 (function () {
     'use strict';
 
+
+    function eitherType(typeName, defaultValue, actualValue) {
+        return typeof actualValue === typeName ? actualValue : defaultValue;
+    }
+
     function greet(greeting) {
-        return typeof greeting === 'string' ? greeting + '!' : 'Hello!';
+        return eitherType('string', 'Hello', greeting) + '!';
     }
 
     function square(x) {
@@ -13,16 +18,12 @@
         return Math.sqrt(x);
     }
 
-    function add (a, b){
+    function add(a, b) {
         return a + b;
     }
 
-    function sum(nums) {
-        let result = 0;
-
-        nums.forEach((value) => result = add(result, value));
-
-        return result;
+    function sum(params) {
+        return params.reduce((result, params) => add(result, params) , 0);
     }
 
     function squareAll(nums) {
@@ -34,7 +35,7 @@
         return sum(squares);
     }
 
-    function Vector (points) {
+    function Vector(points) {
         this.points = points;
 
         points.forEach((value, index) => this[index] = value);

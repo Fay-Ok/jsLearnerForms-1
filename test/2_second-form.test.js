@@ -14,7 +14,6 @@ describe('Forms', function() {
      * 
      * Key: Make sure tests continue to pass.
      */
-
     describe('greeter', function() {
         /*
          * Refactoring steps:
@@ -54,7 +53,7 @@ describe('Forms', function() {
 
         // Keep the tests passing!
 
-        it('should take the square root of 1', function() {
+        it('should take the square root of 1', function() { 
             assert.equal(jsforms.squareRoot(1), 1);
         });
 
@@ -162,7 +161,7 @@ describe('Forms', function() {
         it('should return a vector given an array which is not the original array', function() {
             let initialArray = [1, 2];
             let vector = jsforms.buildVector(initialArray);
-
+            console.log(vector);
             assert.equal(initialArray !== vector, true);
         });
 
@@ -227,7 +226,7 @@ describe('Forms', function() {
         it('should return single vector when the only vector magnitude is acceptably short', function() {
             let vectors = [jsforms.buildVector([1, 2])];
             let result = jsforms.getVectorsShorterThan(5, vectors);
-
+            
             assert.equal(result.length, 1);
             assert.equal(result[0].toString(), '<1,2>');
         });
@@ -236,6 +235,7 @@ describe('Forms', function() {
             let length = 4;
             let vectors = [jsforms.buildVector([3, 4])];
             let result = jsforms.getVectorsShorterThan(length, vectors);
+            console.log(result); 
 
             assert.equal(result.length, 0)
         });
