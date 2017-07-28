@@ -8,12 +8,23 @@ require('./helpers/global-helper');
 
 describe('Forms', function() {
 
+<<<<<<< HEAD
     /*
      * Refactoring: the act of changing code for readability or maintainability
      *              without changing the external behavior
      * 
      * Key: Make sure tests continue to pass.
      */
+=======
+        it('should say "Hello!" by default', function () {
+            // Create function called greet
+
+            /*
+             * function greet() {
+             *      return _string_;
+             * }
+             */
+>>>>>>> upstream/master
 
     describe('greeter', function() {
         /*

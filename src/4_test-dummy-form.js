@@ -1,9 +1,9 @@
 'use strict';
 
-const contactService = require('./modules/contactService');
-const pluginApi = require('./modules/pluginApi');
+const contactService = require('./test-dummy-form/contactService');
+const pluginApi = require('./test-dummy-form/pluginApi');
 
-function isArray (value) {
+function isArray(value) {
     return value !== null &&
         typeof value === 'object' &&
         Object.prototype.toString.call(value) === '[object Array]';
@@ -19,10 +19,10 @@ function compareContactRecords(record1, record2) {
     return result !== 0 ? result : compareNames(record1.firstName, record2.firstName);
 }
 
-function sortByContactName (contactRecords) {
+function sortByContactName(contactRecords) {
     return isArray(contactRecords) ?
         contactRecords.sort(compareContactRecords) :
-        null;
+        [];
 }
 
 function getContactNames(callback) {
@@ -31,7 +31,7 @@ function getContactNames(callback) {
     contactService.getContactNameList(userId, sortRecordsAndCallBack);
 
     function sortRecordsAndCallBack(error, contactNameRecords) {
-        let sortedRecords = sortByContactName(contactNameRecords);
+        let sortedRecords = Boolean(error) ? null : sortByContactName(contactNameRecords);
         callback(error, sortedRecords);
     }
 }
