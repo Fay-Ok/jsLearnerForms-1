@@ -228,7 +228,7 @@ describe('Forms', function() {
         it('should return single vector when the only vector magnitude is acceptably short', function() {
             let vectors = [jsforms.buildVector([1, 2])];
             let result = jsforms.getVectorsShorterThan(5, vectors);
-
+            console.log(result);
             assert.equal(result.length, 1);
             assert.equal(result[0].toString(), '<1,2>');
         });

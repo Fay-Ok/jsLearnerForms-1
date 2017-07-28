@@ -57,7 +57,7 @@
     function getVectorsShorterThan(length, vectores) {
         let result = [];
 
-        for (var index = 0; index < vectores[0].length; index++) {
+        for (var index = 0; index < vectores.length; index++) {
             if (magnitude(vectores[index]) < length) {
                 result.push(vectores[index]);
             }
