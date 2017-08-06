@@ -23,7 +23,9 @@
     }
 
     function sum(params) {
-        return params.reduce((result, params) => add(result, params) , 0);
+         let result = 0;
+        return params.reduce(add,0);
+
     }
 
     function squareAll(nums) {
@@ -36,19 +38,26 @@
     }
 
     function Vector(points) {
-        this.points = points;
 
-        points.forEach((value, index) => this[index] = value);
+        let vector = this instanceof Vector? this: new Vector(points);
+        Vector.valueAttachment(vector,points);
+        
+        return vector;
     }
+    
+    Object.defineProperty= (vector,key,{
+        writeable:false,
+        value : value
+    });
 
+    Vector.valueAttachment = function (vector, points){
+        vector.points = points;
+        points.forEach((value, index) => vector[index] = value);
+    }
     Vector.prototype = {
         valueOf: function () { return this.points.valueOf(); },
         toString: function () { return '<' + this.points.join(',') + '>'; }
     };
-
-    function buildVector(points) {
-        return new Vector(points);
-    }
 
     function magnitude(vector) {
         let squaredMagnitude = sumOfSquares(vector);
@@ -60,7 +69,7 @@
     }
 
     module.exports = {
-        buildVector: buildVector,
+        buildVector: Vector,
         getVectorsShorterThan: getVectorsShorterThan,
         greet: greet,
         magnitude: magnitude,

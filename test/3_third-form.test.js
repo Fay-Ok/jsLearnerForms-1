@@ -75,7 +75,7 @@ describe('Forms', function () {
 
     });
 
-    describe('sum', function () {
+    describe.only('sum', function () {
 
         /*
          * 1 - Refactor forEach loop to reduce and return
@@ -134,7 +134,8 @@ describe('Forms', function () {
 
         /*
          * 1 - Make the Vector constructor into a constructor/factory
-         *      function Vector (points) {
+         *      
+         *  function Vector (points) {
          *          let vector = this instanceof Vector ? _object_ : new _function_;
          *          
          *          vector.points = _array_;
@@ -165,8 +166,9 @@ describe('Forms', function () {
         it('should return a vector matching original values', function () {
             let initialArray = [1, 2];
             let vector = jsforms.buildVector(initialArray);
+            console.log(vector);
             let resultValues = [vector[0], vector[1]];
-
+            console.log(resultValues);
             assert.equal(resultValues.toString(), initialArray.toString());
         });
 
@@ -191,7 +193,7 @@ describe('Forms', function () {
 
     });
 
-    describe('Immutable Object Properties and Data Hiding', function () {
+    describe.only('Immutable Object Properties and Data Hiding', function () {
 
         it('should not be possible to modify values in a vector', function () {
             /*
